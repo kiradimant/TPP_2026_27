@@ -3,12 +3,12 @@ using System.Collections.Generic;
 
 class Program {
     
-    // Функция вывода баланса (с опциональным параметром валюты)
+    
     static void PrintBalance(double balance, string currency = "₽") {
         Console.WriteLine($"Баланс: {balance}");
     }
 
-    // Функция пополнения счёта
+    
     static void Deposit(ref double balance, List<string> history) {
         Console.Write("Введите сумму для пополнения(>0): ");
         double platej = double.Parse(Console.ReadLine());
@@ -21,7 +21,7 @@ class Program {
         }
     }
 
-    // Функция снятия денег (исправлена логика проверок)
+    
     static void Withdraw(ref double balance, List<string> history) {
         Console.Write("Введите сумму для снятия(>0)");
         double minus = double.Parse(Console.ReadLine());
@@ -36,7 +36,7 @@ class Program {
         }
     }
 
-    // Функция вывода истории через цикл for
+    
     static void ShowHistory(List<string> history) {
         if (history.Count == 0) {
             Console.WriteLine("История пуста");
