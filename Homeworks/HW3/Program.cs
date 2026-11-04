@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Collections.Generic;
 
 abstract class Character
@@ -82,7 +82,7 @@ class Player : Character
 
     public override void Attack(Character target)
     {
-        Console.WriteLine($"Игрок {Name} наносит удар");
+        Console.WriteLine($"РРіСЂРѕРє {Name} РЅР°РЅРѕСЃРёС‚ СѓРґР°СЂ");
         target.TakeDamage(Power);
     }
 }
@@ -95,7 +95,7 @@ class Enemy : Character
 
     public override void Attack(Character target)
     {
-        Console.WriteLine($"Враг {Name} атакует");
+        Console.WriteLine($"Р’СЂР°Рі {Name} Р°С‚Р°РєСѓРµС‚");
         target.TakeDamage(Power);
     }
 }
@@ -104,12 +104,12 @@ class Program
 {
     static void Main()
     {
-        Player hero = new Player("Герой", 100, 20);
-        Enemy enemy = new Enemy("Враг", 80, 15);
+        Player hero = new Player("Р“РµСЂРѕР№", 100, 20);
+        Enemy enemy = new Enemy("Р’СЂР°Рі", 80, 15);
 
-        Console.WriteLine($"Создано персонажей: {Character.HowMany()}");
-        Console.WriteLine($"Проверка статов (100, 20): {Character.IsValidStats(100, 20)}");
-        Console.WriteLine($"Проверка статов (-100, 20): {Character.IsValidStats(-100, 20)}");
+        Console.WriteLine($"РЎРѕР·РґР°РЅРѕ РїРµСЂСЃРѕРЅР°Р¶РµР№: {Character.HowMany()}");
+        Console.WriteLine($"РџСЂРѕРІРµСЂРєР° СЃС‚Р°С‚РѕРІ (100, 20): {Character.IsValidStats(100, 20)}");
+        Console.WriteLine($"РџСЂРѕРІРµСЂРєР° СЃС‚Р°С‚РѕРІ (-100, 20): {Character.IsValidStats(-100, 20)}");
         Console.WriteLine();
 
         List<Character> fighters = new List<Character> { hero, enemy };
@@ -135,9 +135,9 @@ class Program
 
         Console.WriteLine();
         if (hero.IsAlive())
-            Console.WriteLine("Победил Герой");
+            Console.WriteLine("РџРѕР±РµРґРёР» Р“РµСЂРѕР№");
         else
-            Console.WriteLine("Победил Враг");
+            Console.WriteLine("РџРѕР±РµРґРёР» Р’СЂР°Рі");
 
         Console.WriteLine();
         Console.WriteLine($"hero == enemy: {hero == enemy}");
