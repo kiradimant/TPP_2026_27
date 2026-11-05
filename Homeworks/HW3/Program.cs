@@ -130,7 +130,7 @@ class Program
             Console.WriteLine(hero);
             if (!hero.IsAlive()) break;
 
-            Console.WriteLine("-------------------");
+            
         }
 
         Console.WriteLine();
